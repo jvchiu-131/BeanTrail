@@ -4,14 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const allowedOrigins = [
-    
-  
-    'https://beantrail.vercel.app', 
-    
-      //for local deployment testing
-    'http://localhost:3000',
-  ];
+  const allowedOrigins = 'https://bean-trail.vercel.app'
 
   app.enableCors({
     origin: allowedOrigins,
